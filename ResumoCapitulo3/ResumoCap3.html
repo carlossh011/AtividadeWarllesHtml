@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Resumo Cap 3</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <h1>O que é Css?</h1>
+
+    <p>
+        Css é uma linguagem de estilo feita para controlar a forma como certos elementos
+        do HTML de uma página web são visualizados no front-end.
+        Você pode influenciar a aparência de listas, elementos de formulário e tabelas.
+        Essa linguagem é uma das três importantes para web, ela define a aparência de uma página web.
+    </p>
+
+    <h2>O Princípio</h2>
+
+    <p>
+        Você pode definir como certos elementos HTML serão exibidos usando Css.
+        Essas regras consistem em duas partes.
+        O seletor Css permite especificar quais elementos serão submetidos as regras do Css.
+        Você pode usar chaves para especificar como os elementos serão exibidos.
+        As declarações consistem em uma propriedade CSS e um valor.
+    </p>
+
+    <h1>Maneiras de incluir Css em HTML</h1>
+
+    <ol>
+
+        <li>Css Externo</li>
+
+        <li>Css Interno</li>
+
+        <li>Css Inline</li>
+
+    </ol>
+
+    <h2>Css Externo</h2>
+
+    <p>
+        No Css externo, as instruções Css ficam em um arquivo separado com extensão ".css".
+        Depois esse arquivo é conectado ao documento HTML usando a tag link.
+    </p>
+
+    <div class="codigo">
+
+        &lt;link href="style.css" rel="stylesheet"&gt;
+
+    </div>
+
+    <h2>Vantagens do Css Externo</h2>
+
+    <table>
+
+        <tr>
+
+            <th>Vantagem</th>
+
+            <th>Descrição</th>
+
+        </tr>
+
+        <tr>
+
+            <td>Organização</td>
+
+            <td>O código fica separado do HTML</td>
+
+        </tr>
+
+        <tr>
+
+            <td>Reutilização</td>
+
+            <td>O mesmo arquivo Css pode ser usado em várias páginas</td>
+
+        </tr>
+
+        <tr>
+
+            <td>Facilidade</td>
+
+            <td>Mais fácil de editar e manter</td>
+
+        </tr>
+
+    </table>
+
+    <h2>Css Interno</h2>
+
+    <p>
+        No Css interno, as regras Css são definidas dentro da própria página HTML.
+        Geralmente elas ficam dentro da tag style no head da página.
+    </p>
+
+    <div class="codigo">
+
+        &lt;style&gt;<br>
+
+        body{<br>
+
+        background-color: lightblue;<br>
+
+        }<br>
+
+        &lt;/style&gt;
+
+    </div>
+
+    <h2>Css Inline</h2>
+
+    <p>
+        No Css inline, o estilo é colocado diretamente no elemento HTML.
+        Esse jeito não é muito recomendado porque dificulta a reutilização do código.
+    </p>
+
+    <div class="codigo">
+
+        &lt;h1 style="color: blue;"&gt;Título&lt;/h1&gt;
+
+    </div>
+
+    <h1>Seletores Css</h1>
+
+    <p>
+        Os seletores servem para escolher quais elementos HTML receberão as regras Css.
+    </p>
+
+    <table>
+
+        <tr>
+
+            <th>Seletor</th>
+
+            <th>Exemplo</th>
+
+            <th>Descrição</th>
+
+        </tr>
+
+        <tr>
+
+            <td>Tipo</td>
+
+            <td>h1</td>
+
+            <td>Seleciona todos os elementos h1</td>
+
+        </tr>
+
+        <tr>
+
+            <td>Classe</td>
+
+            <td>.titulo</td>
+
+            <td>Seleciona elementos com classe titulo</td>
+
+        </tr>
+
+        <tr>
+
+            <td>ID</td>
+
+            <td>#menu</td>
+
+            <td>Seleciona elemento com id menu</td>
+
+        </tr>
+
+        <tr>
+
+            <td>Universal</td>
+
+            <td>*</td>
+
+            <td>Seleciona todos os elementos</td>
+
+        </tr>
+
+    </table>
+
+    <h2>Exemplos de Seletores</h2>
+
+    <table>
+
+        <tr>
+
+            <th>Código</th>
+
+            <th>Resultado</th>
+
+        </tr>
+
+        <tr>
+
+            <td>h1</td>
+
+            <td>Seleciona todos os títulos h1</td>
+
+        </tr>
+
+        <tr>
+
+            <td>p</td>
+
+            <td>Seleciona todos os parágrafos</td>
+
+        </tr>
+
+        <tr>
+
+            <td>.caixa</td>
+
+            <td>Seleciona elementos da classe caixa</td>
+
+        </tr>
+
+        <tr>
+
+            <td>#menu</td>
+
+            <td>Seleciona elemento com id menu</td>
+
+        </tr>
+
+    </table>
+
+    <h1>Cascata e Especificidade</h1>
+
+    <p>
+        O Css funciona em forma de cascata.
+        Isso significa que várias regras podem ser aplicadas ao mesmo elemento.
+        A regra mais específica geralmente terá prioridade.
+    </p>
+
+    <div class="codigo">
+
+        h1{<br>
+
+        color: blue;<br>
+
+        }<br><br>
+
+        h1{<br>
+
+        color: green;<br>
+
+        }
+
+    </div>
+
+    <p>
+        Nesse exemplo, a cor verde será aplicada porque a última regra foi a mais recente.
+    </p>
+
+    <h1>Herança</h1>
+
+    <p>
+        Algumas propriedades Css podem ser herdadas pelos elementos filhos.
+        Por exemplo, cor e fonte podem passar do elemento pai para os elementos filhos.
+    </p>
+
+    <h1>Cores no Css</h1>
+
+    <p>
+        O Css permite definir cores de várias formas diferentes.
+    </p>
+
+    <ul>
+
+        <li>Nomes de cores</li>
+
+        <li>Valores RGB</li>
+
+        <li>Valores Hexadecimais</li>
+
+        <li>RGBA</li>
+
+        <li>HSL</li>
+
+    </ul>
+
+    <table>
+
+        <tr>
+
+            <th>Tipo</th>
+
+            <th>Exemplo</th>
+
+        </tr>
+
+        <tr>
+
+            <td>Nome</td>
+
+            <td>blue</td>
+
+        </tr>
+
+        <tr>
+
+            <td>RGB</td>
+
+            <td>rgb(255,0,0)</td>
+
+        </tr>
+
+        <tr>
+
+            <td>Hexadecimal</td>
+
+            <td>#FF0000</td>
+
+        </tr>
+
+    </table>
+
+    <h2>Tabela de Cores</h2>
+
+    <table>
+
+        <tr>
+
+            <th>Cor</th>
+
+            <th>Código</th>
+
+        </tr>
+
+        <tr>
+
+            <td>Azul</td>
+
+            <td>blue</td>
+
+        </tr>
+
+        <tr>
+
+            <td>Vermelho</td>
+
+            <td>#FF0000</td>
+
+        </tr>
+
+        <tr>
+
+            <td>Verde</td>
+
+            <td>rgb(0,255,0)</td>
+
+        </tr>
+
+        <tr>
+
+            <td>Amarelo</td>
+
+            <td>yellow</td>
+
+        </tr>
+
+    </table>
+
+    <h1>Formatação de Texto</h1>
+
+    <p>
+        O Css também permite modificar fontes, tamanho do texto, alinhamento e espaçamento.
+    </p>
+
+    <ul>
+
+        <li>font-family</li>
+
+        <li>font-size</li>
+
+        <li>font-style</li>
+
+        <li>font-weight</li>
+
+        <li>text-align</li>
+
+    </ul>
+
+    <div class="codigo">
+
+        p{<br>
+
+        font-family: Arial;<br>
+
+        font-size: 16px;<br>
+
+        text-align: justify;<br>
+
+        }
+
+    </div>
+
+    <h1>Links no Css</h1>
+
+    <p>
+        Os links podem mudar de aparência dependendo da interação do usuário.
+    </p>
+
+    <table>
+
+        <tr>
+
+            <th>Pseudo-classe</th>
+
+            <th>Função</th>
+
+        </tr>
+
+        <tr>
+
+            <td>:link</td>
+
+            <td>Link normal</td>
+
+        </tr>
+
+        <tr>
+
+            <td>:visited</td>
+
+            <td>Link visitado</td>
+
+        </tr>
+
+        <tr>
+
+            <td>:hover</td>
+
+            <td>Quando o mouse passa</td>
+
+        </tr>
+
+        <tr>
+
+            <td>:active</td>
+
+            <td>Quando o link é clicado</td>
+
+        </tr>
+
+    </table>
+
+    <h2>Estados do Link</h2>
+
+    <table>
+
+        <tr>
+
+            <th>Estado</th>
+
+            <th>Descrição</th>
+
+        </tr>
+
+        <tr>
+
+            <td>:link</td>
+
+            <td>Link normal</td>
+
+        </tr>
+
+        <tr>
+
+            <td>:visited</td>
+
+            <td>Link já visitado</td>
+
+        </tr>
+
+        <tr>
+
+            <td>:hover</td>
+
+            <td>Mouse em cima do link</td>
+
+        </tr>
+
+        <tr>
+
+            <td>:active</td>
+
+            <td>Momento do clique</td>
+
+        </tr>
+
+    </table>
+
+    <h1>Listas no Css</h1>
+
+    <p>
+        O Css permite personalizar listas ordenadas e não ordenadas.
+    </p>
+
+    <h2>Lista não ordenada</h2>
+
+    <ul class="lista1">
+
+        <li>HTML</li>
+
+        <li>CSS</li>
+
+        <li>JavaScript</li>
+
+    </ul>
+
+    <h2>Lista ordenada</h2>
+
+    <ol class="lista2">
+
+        <li>HTML</li>
+
+        <li>CSS</li>
+
+        <li>JavaScript</li>
+
+    </ol>
+
+    <h1>Tabelas no Css</h1>
+
+    <p>
+        As tabelas podem ficar mais bonitas usando Css.
+        É possível modificar bordas, cores, alinhamento e espaçamento.
+    </p>
+
+    <table>
+
+        <tr>
+
+            <th>Linguagem</th>
+
+            <th>Função</th>
+
+        </tr>
+
+        <tr>
+
+            <td>HTML</td>
+
+            <td>Estrutura</td>
+
+        </tr>
+
+        <tr>
+
+            <td>CSS</td>
+
+            <td>Estilo</td>
+
+        </tr>
+
+        <tr>
+
+            <td>JavaScript</td>
+
+            <td>Interatividade</td>
+
+        </tr>
+
+    </table>
+
+    <h2>Propriedades usadas em Tabelas</h2>
+
+    <table>
+
+        <tr>
+
+            <th>Propriedade</th>
+
+            <th>Função</th>
+
+        </tr>
+
+        <tr>
+
+            <td>border</td>
+
+            <td>Define a borda</td>
+
+        </tr>
+
+        <tr>
+
+            <td>padding</td>
+
+            <td>Espaçamento interno</td>
+
+        </tr>
+
+        <tr>
+
+            <td>background-color</td>
+
+            <td>Cor de fundo</td>
+
+        </tr>
+
+        <tr>
+
+            <td>text-align</td>
+
+            <td>Alinhamento do texto</td>
+
+        </tr>
+
+        <tr>
+
+            <td>border-collapse</td>
+
+            <td>Junta as bordas</td>
+
+        </tr>
+
+    </table>
+
+</body>
+
+</html>
