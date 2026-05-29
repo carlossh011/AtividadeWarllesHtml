@@ -1,47 +1,27 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
-    <title>Resumo Cap 3</title>
+    <title>Resumo Cap 3 - CSS</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <h1>O que é Css?</h1>
-    <p>
-        Css é uma linguagem de estilo feita para controlar a forma como certos elementos
-        do HTML de uma página web são visualizados no front-end.
-        Você pode influenciar a aparência de listas, elementos de formulário e tabelas.
-        Essa linguagem é uma das três importantes para web, ela define a aparência de uma página web.
-    </p>
+    <h1>O que é CSS?</h1>
+    <p>CSS é uma linguagem de estilo que controla a apresentação e a aparência dos elementos HTML no front-end de uma página web.</p>
 
     <h2>O Princípio</h2>
-    <p>
-        Você pode definir como certos elementos HTML serão exibidos usando Css.
-        Essas regras consistem em duas partes.
-        O seletor Css permite especificar quais elementos serão submetidos as regras do Css.
-        Você pode usar chaves para especificar como os elementos serão exibidos.
-        As declarações consistem em uma propriedade CSS e um valor.
-    </p>
+    <p>As regras CSS possuem duas partes: o seletor (indica quais elementos receberão o estilo) e as declarações entre chaves (compostas por uma propriedade e um valor correspondente).</p>
 
-    <h1>Maneiras de incluir Css em HTML</h1>
+    <h1>Inclusão de CSS no HTML</h1>
     <ol>
-        <li>Css Externo</li>
-        <li>Css Interno</li>
-        <li>Css Inline</li>
+        <li>CSS Externo: Arquivo .css separado, conectado via tag &lt;link&gt;.</li>
+        <li>CSS Interno: Regras definidas na tag &lt;style&gt;, dentro do head.</li>
+        <li>CSS Inline: Estilo aplicado diretamente no elemento HTML. Pouco recomendado por dificultar a reutilização.</li>
+        <li>Regra @import: Usada dentro de arquivos CSS ou da tag &lt;style&gt; para importar outros arquivos de estilo.</li>
     </ol>
 
-    <h2>Css Externo</h2>
-    <p>
-        No Css externo, as instruções Css ficam em um arquivo separado com extensão ".css" e depois esse arquivo é conectado ao documento HTML.
-    </p>
-    <div class="codigo">
-        &lt;link href="style.css" rel="stylesheet"&gt;
-    </div>
-
-    <h2>Vantagens do Css Externo</h2>
+    <h2>Vantagens do CSS Externo</h2>
     <table>
         <tr>
             <th>Vantagem</th>
@@ -49,44 +29,19 @@
         </tr>
         <tr>
             <td>Organização</td>
-            <td>O código fica separado do HTML.</td>
+            <td>Separa o código de estilo do HTML.</td>
         </tr>
         <tr>
             <td>Reutilização</td>
-            <td>O mesmo arquivo Css pode ser usado em várias páginas.</td>
+            <td>Um único arquivo serve para várias páginas.</td>
         </tr>
         <tr>
-            <td>Facilidade</td>
-            <td>Mais fácil de editar e manter a consistência visual.</td>
+            <td>Manutenção</td>
+            <td>Facilita a edição e garante consistência visual.</td>
         </tr>
     </table>
 
-    <h2>Css Interno</h2>
-    <p>
-        No Css interno, as regras Css são definidas dentro da própria página HTML.
-        Geralmente elas ficam dentro da tag style no head da página.
-    </p>
-    <div class="codigo">
-        &lt;style&gt;<br>
-        body{<br>
-        background-color: lightblue;<br>
-        }<br>
-        &lt;/style&gt;
-    </div>
-
-    <h2>Css Inline</h2>
-    <p>
-        No Css inline, o estilo é colocado diretamente em um elemento HTML.
-        Esse jeito não é muito recomendado porque a reutilização das regras CSS é perdida.
-    </p>
-    <div class="codigo">
-        &lt;h1 style="color: blue;"&gt;Título&lt;/h1&gt;
-    </div>
-
-    <h1>Seletores Css</h1>
-    <p>
-        Os seletores servem para escolher quais elementos HTML receberão as regras Css.
-    </p>
+    <h1>Seletores CSS</h1>
     <table>
         <tr>
             <th>Seletor</th>
@@ -96,17 +51,17 @@
         <tr>
             <td>Tipo</td>
             <td>h1</td>
-            <td>Seleciona todos os elementos de acordo com a tag.</td>
+            <td>Seleciona pela tag HTML.</td>
         </tr>
         <tr>
             <td>Classe</td>
             <td>.titulo</td>
-            <td>Seleciona elementos com base nas classes CSS.</td>
+            <td>Seleciona por classes.</td>
         </tr>
         <tr>
             <td>ID</td>
             <td>#menu</td>
-            <td>Seleciona elemento com o id correspondente.</td>
+            <td>Seleciona pelo identificador único.</td>
         </tr>
         <tr>
             <td>Universal</td>
@@ -115,10 +70,7 @@
         </tr>
     </table>
 
-    <h2>Seletores Avançados e Combinações</h2>
-    <p>
-        Além dos seletores básicos, o CSS permite seleções muito mais complexas combinando regras.
-    </p>
+    <h2>Seletores Avançados</h2>
     <table>
         <tr>
             <th>Seletor</th>
@@ -128,210 +80,105 @@
         <tr>
             <td>Atributo</td>
             <td>[type="text"]</td>
-            <td>Seleciona elementos com base no valor de um de seus atributos.</td>
+            <td>Seleciona pelo valor de um atributo.</td>
         </tr>
         <tr>
             <td>Irmão Adjacente</td>
             <td>h1 + p</td>
-            <td>Seleciona elementos que seguem imediatamente outro elemento.</td>
+            <td>Seleciona o elemento imediatamente seguinte.</td>
         </tr>
         <tr>
             <td>Irmão Geral</td>
             <td>h1 ~ p</td>
-            <td>Seleciona elementos que seguem outro elemento em algum momento.</td>
+            <td>Seleciona irmãos que vêm depois em qualquer momento.</td>
         </tr>
         <tr>
             <td>Filho Direto</td>
             <td>body > ul</td>
-            <td>Seleciona elementos que são filhos diretos.</td>
+            <td>Seleciona apenas os filhos diretos.</td>
         </tr>
         <tr>
             <td>Descendente</td>
             <td>body ul</td>
-            <td>Seleciona elementos que são descendentes (mesmo que não diretos).</td>
+            <td>Seleciona qualquer descendente.</td>
         </tr>
     </table>
 
     <h2>Pseudo-elementos</h2>
-    <p>
-        Enquanto as pseudo-classes selecionam elementos em estados, os pseudo-elementos abordam partes específicas de um elemento selecionado e podem até criar novos elementos não presentes no HTML.
-    </p>
+    <p>Permitem estilizar partes específicas de um elemento ou criar novos elementos virtuais.</p>
     <table>
         <tr>
             <th>Pseudo-elemento</th>
             <th>Função</th>
         </tr>
         <tr>
-            <td>::before</td>
-            <td>Cria um elemento antes do elemento selecionado.</td>
+            <td>::before / ::after</td>
+            <td>Insere conteúdo antes ou depois do elemento.</td>
         </tr>
         <tr>
-            <td>::after</td>
-            <td>Cria um elemento depois do elemento selecionado.</td>
-        </tr>
-        <tr>
-            <td>::first-letter</td>
-            <td>Refere-se à primeira letra do texto.</td>
-        </tr>
-        <tr>
-            <td>::first-line</td>
-            <td>Refere-se à primeira linha de texto.</td>
+            <td>::first-letter / ::first-line</td>
+            <td>Estiliza a primeira letra ou linha.</td>
         </tr>
         <tr>
             <td>::selection</td>
-            <td>Refere-se à parte do texto selecionada pelo usuário.</td>
+            <td>Estiliza o texto selecionado pelo usuário.</td>
         </tr>
     </table>
 
     <h1>Cascata e Especificidade</h1>
-    <p>
-        O Css funciona em forma de cascata. Devido a isso, várias regras podem se aplicar a um único elemento.
-        Se houver regras conflitantes, a regra mais específica tem prioridade.
-    </p>
-    
-    <h2>Cálculo de Especificidade</h2>
-    <p>
-        O cálculo da especificidade é baseado em três contadores (A, B e C), iniciados em 0:
-    </p>
+    <p>O CSS aplica regras em cascata. Em caso de conflito, a regra mais específica vence.</p>
     <ul>
-        <li><strong>Contador A:</strong> Incrementado em 1 para cada seletor de ID.</li>
-        <li><strong>Contador B:</strong> Incrementado em 1 para cada seletor de classe, atributo ou pseudo-classe.</li>
-        <li><strong>Contador C:</strong> Incrementado em 1 para cada seletor de tipo ou pseudo-elemento.</li>
+        <li>Contador A: Seletores de ID.</li>
+        <li>Contador B: Classes, atributos ou pseudo-classes.</li>
+        <li>Contador C: Tipos ou pseudo-elementos.</li>
     </ul>
-    <p>
-        <em>Exemplo:</em> O seletor <code>#chapter p</code> resulta em A=1, B=0, C=1 (Especificidade: 101). Seletores universais não contam no cálculo.
-    </p>
 
     <h1>Herança</h1>
-    <p>
-        Alguns valores definidos via regras CSS em elementos pais são herdados por seus elementos filhos.
-        Por exemplo, a cor e a fonte passam adiante. Propriedades como bordas (border) não são herdadas.
-    </p>
+    <p>Algumas propriedades (como cor e fonte) são herdadas de elementos pais para filhos, enquanto outras (como bordas) não são.</p>
 
-    <h1>Cores no Css</h1>
-    <p>
-        O Css permite definir cores de várias formas diferentes:
-    </p>
+    <h1>Cores e Texto</h1>
     <ul>
-        <li><strong>Nomes de cores:</strong> Mais de 140 nomes predefinidos (ex: yellow, blue).</li>
-        <li><strong>Valores RGB:</strong> Composição de vermelho, verde e azul (0 a 255).</li>
-        <li><strong>Valores Hexadecimais:</strong> Valor de 6 dígitos (ex: #FFFF00).</li>
-        <li><strong>RGBA:</strong> Valor RGB com um valor alfa para opacidade.</li>
-        <li><strong>HSL e HSLA:</strong> Baseado em matiz, saturação e luminosidade (e opacidade no HSLA).</li>
+        <li>Cores: Podem ser definidas por nomes, RGB, Hexadecimal, RGBA, HSL ou HSLA.</li>
+        <li>Fonte: Controlada por font-family, font-size, font-style (itálico) e font-weight (negrito).</li>
+        <li>Formatação: text-transform (maiúsculas/minúsculas), text-decoration (sublinhado), line-height (espaço entre linhas), letter-spacing e text-align (alinhamento).</li>
     </ul>
 
-    <h1>Formatação de Texto</h1>
-    <p>
-        Você pode influenciar a aparência básica do texto usando propriedades CSS:
-    </p>
-    <ul>
-        <li><strong>font-family:</strong> Define a família da fonte.</li>
-        <li><strong>font-size:</strong> Define o tamanho da fonte.</li>
-        <li><strong>font-style:</strong> Estilo (ex: itálico).</li>
-        <li><strong>font-weight:</strong> Peso/negrito.</li>
-        <li><strong>text-align:</strong> Alinhamento horizontal.</li>
-    </ul>
-
-    <h1>Links no Css</h1>
-    <p>
-        Os links podem ser personalizados através de pseudo-classes.
-    </p>
+    <h1>Links</h1>
     <table>
         <tr>
             <th>Pseudo-classe</th>
             <th>Descrição</th>
         </tr>
         <tr>
-            <td>:link</td>
-            <td>Permite formatar links que ainda não foram visitados.</td>
+            <td>:link / :visited</td>
+            <td>Estiliza links não visitados e já visitados.</td>
         </tr>
         <tr>
-            <td>:visited</td>
-            <td>Permite formatar links que já foram visitados.</td>
-        </tr>
-        <tr>
-            <td>:hover</td>
-            <td>Permite formatar links quando "tocados" com o mouse.</td>
-        </tr>
-        <tr>
-            <td>:active</td>
-            <td>Permite formatar links no momento em que são clicados.</td>
+            <td>:hover / :active</td>
+            <td>Estiliza quando o mouse passa por cima e no momento do clique.</td>
         </tr>
         <tr>
             <td>:focus</td>
-            <td>Permite formatar links quando eles recebem o foco.</td>
+            <td>Estiliza quando o link recebe foco.</td>
         </tr>
     </table>
 
-    <h1>Listas no Css</h1>
-    <p>
-        O Css permite personalizar listas ordenadas e não ordenadas, principalmente os marcadores.
-    </p>
+    <h1>Listas e Tabelas</h1>
+    <ul>
+        <li>Listas: Personalizadas com list-style-image (imagem como marcador) e list-style-position (marcador dentro ou fora do bloco).</li>
+        <li>Tabelas: Estilizadas com border (bordas), padding (espaçamento interno) e border-collapse (une bordas vizinhas).</li>
+    </ul>
+
+    <h1>Sistemas de Layout</h1>
+    <p>Controlam o posicionamento e a organização dos elementos na página.</p>
     
-    <h2>Imagens e Posicionamento de Marcadores</h2>
+    <h2>Block-Level vs Inline-Level</h2>
     <ul>
-        <li><strong>list-style-image:</strong> Passa o caminho ou URL para a imagem desejada usada como marcador.</li>
-        <li><strong>list-style-position:</strong> Personaliza a posição. O valor <code>outside</code> deixa o marcador à esquerda (padrão). O valor <code>inside</code> garante que o marcador fique recuado dentro do bloco de texto.</li>
+        <li>Block-level: Ocupam a linha inteira verticalmente (ex: divs, parágrafos).</li>
+        <li>Inline-level: Ocupam apenas o espaço do seu conteúdo horizontalmente (ex: spans, links).</li>
     </ul>
 
-    <h2>Lista não ordenada</h2>
-    <ul class="lista1">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-    </ul>
-
-    <h2>Lista ordenada</h2>
-    <ol class="lista2">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-    </ol>
-
-    <h1>Tabelas no Css</h1>
-    <p>
-        As tabelas sempre parecem simples demais sem CSS, mas podem ser facilmente personalizadas.
-    </p>
-    <table>
-        <tr>
-            <th>Propriedade</th>
-            <th>Função</th>
-        </tr>
-        <tr>
-            <td>border</td>
-            <td>Usada para projetar bordas (largura, estilo e cor).</td>
-        </tr>
-        <tr>
-            <td>padding</td>
-            <td>Define quanto espaço deve existir entre o conteúdo de uma célula e sua borda.</td>
-        </tr>
-        <tr>
-            <td>border-collapse</td>
-            <td>Usada para "colapsar" as bordas para que as células "compartilhem" uma borda.</td>
-        </tr>
-    </table>
-
-    <h1>Sistemas de Layout (Seção 3.4)</h1>
-    <p>
-        Usando CSS, você pode posicionar com precisão os elementos HTML em uma página da web e influenciar o layout.
-    </p>
-
-    <h2>Elementos Block-Level vs. Inline-Level</h2>
-    <p>
-        Basicamente, o HTML distingue entre elementos de nível de bloco e elementos de nível em linha:
-    </p>
-    <ul>
-        <li><strong>Block-level:</strong> São sempre exibidos em uma nova linha e organizados verticalmente.</li>
-        <li><strong>Inline-level:</strong> São exibidos horizontalmente onde aparecem no fluxo de texto.</li>
-    </ul>
-    <p>
-        Com a propriedade CSS <code>display</code>, você pode personalizar isso: os valores <code>block</code> ou <code>inline</code> forçam o comportamento correspondente.
-    </p>
-
-    <h2>Tipos de Posicionamento</h2>
-    <p>
-        Você tem maneiras diferentes de posicionar elementos usando a propriedade <code>position</code>:
-    </p>
+    <h2>Posicionamento (position)</h2>
     <table>
         <tr>
             <th>Valor</th>
@@ -339,40 +186,39 @@
         </tr>
         <tr>
             <td>static</td>
-            <td>Posicionados conforme aparecem no código HTML (no fluxo normal).</td>
+            <td>Fluxo normal padrão do HTML.</td>
         </tr>
         <tr>
             <td>relative</td>
-            <td>Posicionados de forma relativa (para cima, direita, baixo, esquerda) baseados em sua posição normal.</td>
+            <td>Posição relativa ao seu local original.</td>
         </tr>
         <tr>
             <td>absolute</td>
-            <td>Retirados do fluxo normal e posicionados em relação ao elemento pai.</td>
+            <td>Posição relativa ao elemento pai posicionado mais próximo.</td>
         </tr>
         <tr>
             <td>fixed</td>
-            <td>Posicionados em relação à janela do navegador (viewport).</td>
+            <td>Fixo em relação à tela do navegador.</td>
         </tr>
         <tr>
             <td>sticky</td>
-            <td>Comportam-se como fixed, mas rolam apenas até um ponto e então permanecem fixos.</td>
+            <td>Rola normalmente até um ponto específico e então fica fixo.</td>
         </tr>
     </table>
 
-    <h2>Float Layout</h2>
-    <p>
-        A propriedade <code>float</code> pode ser usada para definir elementos para a borda esquerda (left) ou direita (right) do bloco circundante. Por muito tempo, foi a arma de escolha para organizar elementos, mas hoje temos alternativas melhores.
-    </p>
+    <h2>Layouts em Formulários e Elementos</h2>
+    <ul>
+        <li>Float Layout: Empurra elementos para a borda esquerda ou direita. Usado historicamente para colocar labels e inputs lado a lado.</li>
+        <li>Flexbox Layout: Layout unidimensional. Ajusta dinamicamente a largura e altura dos itens (flex items) dentro de um contêiner (flex container) para preencher o espaço, podendo ser alinhado em linha ou coluna.</li>
+        <li>Grid Layout: Layout bidimensional. Permite organizar elementos complexos através da definição de linhas e colunas dentro de uma grade.</li>
+    </ul>
 
-    <h2>Flexbox Layout</h2>
-    <p>
-        Introduzido com o CSS3, o layout flexbox permite que um contêiner ajuste dinamicamente a largura e a altura de seus itens para preencher o espaço disponível. Ao contrário dos layouts regulares, o flexbox é independente de direção (arranjos verticais e horizontais).
-    </p>
-
-    <h2>Grid Layout</h2>
-    <p>
-        Para layouts complexos, o grid layout (grade) é o mais adequado. Em contraste com o flexbox (unidimensional), este é bidimensional, envolvendo o posicionamento de itens em uma grade dentro de um contêiner, facilitando a implementação de designs avançados.
-    </p>
+    <h1>Perspectivas Futuras do CSS (Outlook)</h1>
+    <ul>
+        <li>Animações: Transições suaves entre propriedades e efeitos visuais.</li>
+        <li>Design Responsivo: Uso de Media Queries para adaptar o layout a diferentes tamanhos de tela (smartphones, tablets, monitores).</li>
+        <li>Frameworks: Ferramentas como Bootstrap e Materialize que oferecem estilos prontos para acelerar o desenvolvimento.</li>
+    </ul>
 
 </body>
 </html>
